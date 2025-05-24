@@ -5,10 +5,13 @@ import numpy as np
 
 from sentence_transformers import SentenceTransformer
 
-st.title("Movie Recommender")
 
-# Force CPU device to avoid GPU errors on Streamlit Cloud
-model = SentenceTransformer('all-MiniLM-L6-v2', device='cpu')
+import torch
+
+device = 'cpu'  # Force CPU; Streamlit Cloud likely has no GPU access
+
+model = SentenceTransformer('all-MiniLM-L6-v2')
+model.to(device)
 
 st.write("Model loaded successfully!")
 
