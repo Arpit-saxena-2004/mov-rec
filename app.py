@@ -5,10 +5,12 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 
 # Load the SentenceTransformer model properly
-model = SentenceTransformer(r"C:\Users\arpit\Movie recommender\sentence_model_dir")
+model = SentenceTransformer('all-MiniLM-L6-v2')
+
 
 # Load similarity matrix and movies data with pickle
-similarity = pickle.load(open(r"C:\Users\arpit\Movie recommender\similarity_matrix.pkl", "rb"))
+similarity = pickle.load(open("similarity_matrix.pkl", "rb"))
+
 new_df = pickle.load(open(r"C:\Users\arpit\Movie recommender\movies_data.pkl", "rb"))
 
 # Define recommendation function
