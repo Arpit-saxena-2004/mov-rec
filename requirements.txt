@@ -4,10 +4,8 @@ pandas
 scikit-learn
 
 
-transformers==4.31.0
 
 streamlit
-
-sentence-transformers==2.2.2
-torch==1.13.1
+sentence-transformers
+torch
 huggingface_hub
