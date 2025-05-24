@@ -5,7 +5,12 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 
 # Load the SentenceTransformer model properly
-model = SentenceTransformer('all-MiniLM-L6-v2')
+from sentence_transformers import SentenceTransformer
+import torch
+
+device = 'cuda' if torch.cuda.is_available() else 'cpu'
+model = SentenceTransformer('all-MiniLM-L6-v2', device=device)
+
 
 
 # Load similarity matrix and movies data with pickle
