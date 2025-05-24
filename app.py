@@ -2,14 +2,15 @@ import streamlit as st
 import pickle
 import numpy as np
 
-from sentence_transformers import SentenceTransformer
 
-# Load the SentenceTransformer model properly
-from sentence_transformers import SentenceTransformer
-import torch
 
-device = 'cuda' if torch.cuda.is_available() else 'cpu'
-model = SentenceTransformer('all-MiniLM-L6-v2', device=device)
+from sentence_transformers import SentenceTransformer
+import os
+
+# Force sentence-transformers to use CPU, even if torch sees a 'cuda'
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+
+model = SentenceTransformer('all-MiniLM-L6-v2')
 
 
 
