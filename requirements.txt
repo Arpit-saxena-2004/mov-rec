@@ -3,10 +3,9 @@ numpy
 pandas
 scikit-learn
 
-streamlit==1.24.1
-torch>=2.0.0
+torch==1.13.1+cpu
 sentence-transformers==2.2.2
 transformers==4.29.2
+streamlit==1.24.1
 pillow>=9.1.0
 huggingface_hub>=0.14.1
-
