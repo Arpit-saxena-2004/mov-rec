@@ -1,3 +1,8 @@
-
 #!/bin/bash
-pip install torch==2.7.0+cpu -f https://download.pytorch.org/whl/cpu/torch_stable.html
+echo "Installing torch CPU version first..."
+pip install torch --index-url https://download.pytorch.org/whl/cpu
+
+echo "Installing other dependencies..."
+pip install -r requirements.txt
+
+echo "Setup completed."
