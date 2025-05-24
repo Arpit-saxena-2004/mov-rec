@@ -3,7 +3,11 @@ numpy
 pandas
 scikit-learn
 
-torch==2.0.1
+
 transformers==4.31.0
-sentence-transformers==2.2.2
+
 streamlit
+
+sentence-transformers==2.2.2
+torch==1.13.1
+huggingface_hub
