@@ -2,10 +2,13 @@
 numpy
 pandas
 scikit-learn
+streamlit
 
-torch==1.13.1+cpu
-sentence-transformers==2.2.2
-transformers==4.29.2
-streamlit==1.24.1
-pillow>=9.1.0
-huggingface_hub>=0.14.1
+
+torch==2.7.0+cpu
+torchvision==0.20.1+cpu
+torchaudio==2.7.0+cpu
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+
+sentence-transformers
