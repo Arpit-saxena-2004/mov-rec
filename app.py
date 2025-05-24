@@ -50,3 +50,6 @@ if st.button("Get Recommendations"):
 
 
 st.write("REQUEST : I kindly request you to search for movies other than those in Hindi, as the recommender system is not efficient with Hindi-language movies due to limited and insufficient data. Thank you for your cooperation!")
+
+
+# Trigger redeploy
