@@ -3,14 +3,14 @@ import pickle
 import numpy as np
 
 
-
 from sentence_transformers import SentenceTransformer
-import os
 
-# Force sentence-transformers to use CPU, even if torch sees a 'cuda'
-os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+st.title("Movie Recommender")
 
-model = SentenceTransformer('all-MiniLM-L6-v2')
+# Force CPU device to avoid GPU errors on Streamlit Cloud
+model = SentenceTransformer('all-MiniLM-L6-v2', device='cpu')
+
+st.write("Model loaded successfully!")
 
 
 
