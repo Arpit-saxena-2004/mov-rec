@@ -1,5 +1,4 @@
 [server]
 headless = true
-
-[run]
-command = "bash setup.sh && streamlit run app.py"
+enableCORS=false
+port = $PORT
