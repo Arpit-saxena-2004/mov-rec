@@ -11,7 +11,10 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 # Load similarity matrix and movies data with pickle
 similarity = pickle.load(open("similarity_matrix.pkl", "rb"))
 
-new_df = pickle.load(open(r"C:\Users\arpit\Movie recommender\movies_data.pkl", "rb"))
+
+with open("movies_data.pkl", "rb") as f:
+    new_df = pickle.load(f)
+
 
 # Define recommendation function
 def recommend(movie):
@@ -37,7 +40,7 @@ if st.button("Get Recommendations"):
             st.write(f"🎥 {title} — & Your chances of liking it are **{score:.0f}%**")
 
     else:
-        st.write("Please enter a valid movie name!")
+        st.write("oops soory movie is not present in the dataset!")
 
 
 st.write("REQUEST : I kindly request you to search for movies other than those in Hindi, as the recommender system is not efficient with Hindi-language movies due to limited and insufficient data. Thank you for your cooperation!")
